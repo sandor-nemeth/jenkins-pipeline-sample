@@ -1,7 +1,19 @@
-node {
-   // Mark the code checkout 'stage'....
-   stage 'Checkout'
-
-   // Checkout code from repository
-   echo 'hello world!'
+pipeline {
+  stages {
+    stage('Checkout') {
+      steps {
+        sh 'echo Hello stage 1'
+      }
+    }
+    stage('Stage 2') {
+      steps {
+        sh 'echo Hello stage 2'
+      }
+    }
+    stage('Stage 3') {
+      steps {
+        sh 'echo Hello stage 3'
+      }
+    }
+  }
 }
